@@ -122,8 +122,8 @@ Ensure you have Python 3.11, 3.12, or 3.13 installed.
 ### 2. Clone and Setup Environment
 ```bash
 # Clone the repository
-git clone <repo-url>
-cd "Quantum mini project"
+git clone https://github.com/harish-k-harish/HQCAE-Anomaly-Detection.git
+cd HQCAE-Anomaly-Detection
 
 # Create and activate a virtual environment (optional but recommended)
 python -m venv .venv
