@@ -100,7 +100,17 @@ During training on nominal data, the variational parameters $\mathbf{W}$ settle 
 
 The benchmark consists of $D=16$ multivariate features with exponentially decaying Toeplitz nominal covariance ($\Sigma_{i, j} = \exp(-|i - j| / 3.0)$) and injected anomaly clusters with mean shifts and inflated covariance.
 
-![HQCAE Experimental Results](assets/hqcae_experimental_results.png)
+The complete experimental findings are visualized across dedicated standalone figures:
+
+| Figure | Description |
+|:---|:---|
+| **Figure 1** (`assets/1_training_convergence.png`) | Training & validation loss convergence across 20 epochs |
+| **Figure 2** (`assets/2_roc_auc_comparison.png`) | Classical MSE vs. Dual-Space Hybrid ROC-AUC comparison curves |
+| **Figure 3** (`assets/3_reconstruction_error_distribution.png`) | Classical residual error probability density distributions and threshold $\tau_{\text{cls}}$ |
+| **Figure 4** (`assets/4_entanglement_entropy_separation.png`) | Quantum subsystem Von Neumann entanglement entropy $S(\rho_A)$ separation |
+| **Figure 5** (`assets/5_confusion_matrices.png`) | Side-by-side annotated confusion matrix heatmaps |
+| **Figure 6** (`assets/6_featurewise_reconstruction_error.png`) | Feature-wise reconstruction residual comparison across all 16 input dimensions |
+| **Figure 7** (`assets/7_performance_summary_table.png`) | Publication-quality benchmark evaluation metrics table |
 
 ### Performance Comparison: Classical MSE vs. Dual-Space Hybrid
 
@@ -136,10 +146,16 @@ The benchmark consists of $D=16$ multivariate features with exponentially decayi
 
 ```
 ├── assets/
-│   └── hqcae_experimental_results.png   # 4-panel publication-quality results figure
-├── hqcae_experiment.ipynb               # Fully executed Jupyter Notebook with outputs
-├── requirements.txt                     # Project dependencies
-└── README.md                            # Complete documentation and execution guide
+│   ├── 1_training_convergence.png              # Standalone training & val MSE convergence
+│   ├── 2_roc_auc_comparison.png                # Classical vs Dual-Space ROC-AUC curve
+│   ├── 3_reconstruction_error_distribution.png # Nominal vs anomaly residual error distributions
+│   ├── 4_entanglement_entropy_separation.png   # Subsystem Von Neumann entropy separation
+│   ├── 5_confusion_matrices.png                # Side-by-side annotated confusion matrix heatmaps
+│   ├── 6_featurewise_reconstruction_error.png  # Feature-wise residual error bar chart (D=16)
+│   └── 7_performance_summary_table.png         # Formatted publication benchmark summary table
+├── hqcae_experiment.ipynb                      # Fully executed Jupyter Notebook with outputs
+├── requirements.txt                            # Project dependencies
+└── README.md                                   # Complete documentation and execution guide
 ```
 
 ---
