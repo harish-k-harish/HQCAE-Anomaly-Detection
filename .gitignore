@@ -5,3 +5,10 @@ __pycache__/
 .venv/
 venv/
 env/
+
+# Local picture assets (kept on local system, excluded from GitHub)
+assets/
+*.png
+*.jpg
+*.jpeg
+
