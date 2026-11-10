@@ -100,17 +100,17 @@ During training on nominal data, the variational parameters $\mathbf{W}$ settle 
 
 The benchmark consists of $D=16$ multivariate features with exponentially decaying Toeplitz nominal covariance ($\Sigma_{i, j} = \exp(-|i - j| / 3.0)$) and injected anomaly clusters with mean shifts and inflated covariance.
 
-The complete experimental findings are visualized across dedicated standalone figures:
+All experimental figures and tables are generated live in the code cells of `hqcae_experiment.ipynb`:
 
-| Figure | Description |
-|:---|:---|
-| **Figure 1** (`assets/1_training_convergence.png`) | Training & validation loss convergence across 20 epochs |
-| **Figure 2** (`assets/2_roc_auc_comparison.png`) | Classical MSE vs. Dual-Space Hybrid ROC-AUC comparison curves |
-| **Figure 3** (`assets/3_reconstruction_error_distribution.png`) | Classical residual error probability density distributions and threshold $\tau_{\text{cls}}$ |
-| **Figure 4** (`assets/4_entanglement_entropy_separation.png`) | Quantum subsystem Von Neumann entanglement entropy $S(\rho_A)$ separation |
-| **Figure 5** (`assets/5_confusion_matrices.png`) | Side-by-side annotated confusion matrix heatmaps |
-| **Figure 6** (`assets/6_featurewise_reconstruction_error.png`) | Feature-wise reconstruction residual comparison across all 16 input dimensions |
-| **Figure 7** (`assets/7_performance_summary_table.png`) | Publication-quality benchmark evaluation metrics table |
+| Result | Type | Analysis Evaluated |
+|:---|:---:|:---|
+| **Result 1** | Line Chart | Training & validation loss convergence across 20 epochs |
+| **Result 2** | ROC Curves | Classical MSE vs. Dual-Space Hybrid ROC-AUC comparison curves |
+| **Result 3** | Distribution Histogram | Classical residual error probability density distributions and threshold $\tau_{\text{cls}}$ |
+| **Result 4** | Distribution Histogram | Quantum subsystem Von Neumann entanglement entropy $S(\rho_A)$ separation |
+| **Result 5** | Matrix Heatmaps | Side-by-side annotated confusion matrix heatmaps (Classical MSE vs. Dual-Space) |
+| **Result 6** | Bar Chart | Feature-wise reconstruction residual comparison across all 16 input dimensions |
+| **Result 7** | Tabular Display | Publication-quality benchmark evaluation metrics table |
 
 ### Performance Comparison: Classical MSE vs. Dual-Space Hybrid
 
@@ -145,15 +145,7 @@ The complete experimental findings are visualized across dedicated standalone fi
 ## Project Structure
 
 ```
-├── assets/
-│   ├── 1_training_convergence.png              # Standalone training & val MSE convergence
-│   ├── 2_roc_auc_comparison.png                # Classical vs Dual-Space ROC-AUC curve
-│   ├── 3_reconstruction_error_distribution.png # Nominal vs anomaly residual error distributions
-│   ├── 4_entanglement_entropy_separation.png   # Subsystem Von Neumann entropy separation
-│   ├── 5_confusion_matrices.png                # Side-by-side annotated confusion matrix heatmaps
-│   ├── 6_featurewise_reconstruction_error.png  # Feature-wise residual error bar chart (D=16)
-│   └── 7_performance_summary_table.png         # Formatted publication benchmark summary table
-├── hqcae_experiment.ipynb                      # Fully executed Jupyter Notebook with outputs
+├── hqcae_experiment.ipynb                      # Fully executed Jupyter Notebook with interactive coded outputs
 ├── requirements.txt                            # Project dependencies
 └── README.md                                   # Complete documentation and execution guide
 ```
